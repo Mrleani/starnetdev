@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Starnet Security</title>
+  <meta name="description" content="StarNet is a cybersecurity technology company building automated protection for web applications and APIs.">
+  <meta name="theme-color" content="#05080f">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg" aria-hidden="true">
+  <span class="orb orb-a"></span>
+  <span class="orb orb-b"></span>
+  <span class="orb orb-c"></span>
+</div>
+<canvas class="rain" id="rain" aria-hidden="true"></canvas>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="nav-wrap" id="top">
+  <nav class="nav" aria-label="Main">
+    <a class="brand" href="#home" aria-label="Starnet Security home">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <defs>
+          <linearGradient id="bm" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#45c8ff"/><stop offset="1" stop-color="#3de0c0"/>
+          </linearGradient>
+        </defs>
+        <path d="M16 2 4 7v8c0 7.4 5.1 13.2 12 15 6.9-1.8 12-7.6 12-15V7L16 2Z" fill="none" stroke="url(#bm)" stroke-width="2" stroke-linejoin="round"/>
+        <path d="m16 9 2 4.6 5 .4-3.8 3.3 1.2 4.9L16 19.6 11.6 22.2l1.2-4.9L9 14l5-.4L16 9Z" fill="url(#bm)"/>
+      </svg>
+      <span>Starnet<span class="brand-sub"> Security</span></span>
+    </a>
+
+    <div class="nav-links" id="siteNav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HOME -->
+  <section class="hero" id="home">
+    <div class="radar" aria-hidden="true">
+      <div class="radar-sweep"></div>
+      <i class="blip b1"></i><i class="blip b2"></i><i class="blip b3"></i><i class="blip b4"></i>
+    </div>
+    <canvas id="net" aria-hidden="true"></canvas>
+
+    <div class="wrap hero-inner">
+      <p class="eyebrow"><span class="pulse"></span>Cybersecurity technology company</p>
+      <h1>
+        <span class="h1-line">Welcome to</span>
+        <span class="h1-line grad" id="scramble" data-text="Starnet Security">Starnet Security</span>
+      </h1>
+      <p class="lead">Automated protection for web applications and API ecosystems. Accurate, easy to integrate, and built for teams of every size.</p>
+      <p class="typed" aria-hidden="true"><span class="typed-prompt">&gt;</span> <span id="typedText">scanning attack surface</span><span class="caret"></span></p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#products"><span>Explore products</span></a>
+        <a class="btn btn-ghost" href="#about"><span>About StarNet</span></a>
+      </div>
+    </div>
+
+    <a class="scroll-cue" href="#about" aria-label="Scroll to About"><span></span></a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">About</p>
+        <h2>About StarNet</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text" data-stagger>
+          <p class="reveal">StarNet is a specialized cybersecurity technology company that builds automated, high-tech systems for protecting web applications and API ecosystems. Our mission is to make top-tier digital security accessible, highly accurate and easy to integrate.</p>
+          <p class="reveal">In an era of rapidly growing digital threats, we believe proactive protection should not require complicated corporate bureaucracy. Through our flagship security platforms, including VMAXweb, StarNet provides deep vulnerability analysis, continuous monitoring of the attack surface and clear remediation instructions for businesses and developers worldwide.</p>
+          <p class="reveal">For StarNet, cybersecurity is not a single feature. It is our foundation. We build infrastructure that protects digital trust.</p>
+        </div>
+
+        <ol class="timeline" data-stagger>
+          <li class="reveal">
+            <h3>Deep analysis</h3>
+            <p>Vulnerability testing across headers, transport security, APIs, exposed files and open ports.</p>
+          </li>
+          <li class="reveal">
+            <h3>Continuous monitoring</h3>
+            <p>The attack surface is watched over time, so new issues surface as soon as they appear.</p>
+          </li>
+          <li class="reveal">
+            <h3>Clear fixes</h3>
+            <p>Every finding comes with a plain explanation and a ready-to-use remediation.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="section" id="products">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Products</p>
+        <h2>Our products</h2>
+      </div>
+
+      <div class="product-intro reveal">
+        <div class="product-name">
+          <h3 class="grad">VMAXweb</h3>
+          <span class="badge">Web &amp; API security scanner</span>
+        </div>
+        <p class="product-desc">Enter the address of a website or API and VMAXweb's asynchronous Python (FastAPI) engine runs real-time tests across six security areas. Results arrive as a Security Health Score, an interactive findings table and a downloadable PDF audit report.</p>
+        <!-- The link address is set in script.js (VMAXWEB_URL) -->
+        <a class="btn btn-primary" id="vmaxLink" href="https://vma-xweb.vercel.app/#b089531e908d45c0a584dc4ff4163017" target="_blank" rel="noopener noreferrer"><span>Open VMAXweb</span><b aria-hidden="true">↗</b></a>
+      </div>
+
+      <div class="product-body">
+        <ul class="modules" data-stagger>
+          <li class="reveal"><span class="mod-id">01</span><div><h4>HTTP security headers</h4><p>Checks HSTS, CSP, X-Frame-Options, X-Content-Type-Options and Referrer-Policy, and flags server version leakage.</p></div></li>
+          <li class="reveal"><span class="mod-id">02</span><div><h4>SSL/TLS and transport</h4><p>Certificate validity, issuer and expiry, plus HTTP to HTTPS redirect enforcement.</p></div></li>
+          <li class="reveal"><span class="mod-id">03</span><div><h4>API and endpoint audit</h4><p>CORS misconfiguration and risky HTTP methods such as PUT, DELETE, TRACE and OPTIONS.</p></div></li>
+          <li class="reveal"><span class="mod-id">04</span><div><h4>Sensitive data exposure</h4><p>Publicly reachable files like /.env, /.git/, /config.json, /swagger.json and /backup.zip, and cookie Secure, HttpOnly and SameSite flags.</p></div></li>
+          <li class="reveal"><span class="mod-id">05</span><div><h4>Network and port security</h4><p>Common high-risk ports: SSH 22, MySQL 3306, PostgreSQL 5432, Redis 6379, MongoDB 27017, and 8080/8443.</p></div></li>
+          <li class="reveal"><span class="mod-id">06</span><div><h4>Subdomain mapping</h4><p>Discovers linked subdomains such as dev and admin, where forgotten test versions often stay exposed.</p></div></li>
+        </ul>
+
+        <div class="report reveal" id="report">
+          <p class="report-label">Example report</p>
+          <div class="gauge" role="img" aria-label="Example Security Health Score of 87 out of 100">
+            <svg viewBox="0 0 140 140" aria-hidden="true">
+              <defs>
+                <linearGradient id="gg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#45c8ff"/><stop offset="1" stop-color="#3de0c0"/>
+                </linearGradient>
+              </defs>
+              <circle class="g-track" cx="70" cy="70" r="58"/>
+              <circle class="g-fill" id="gaugeFill" cx="70" cy="70" r="58" data-score="87"/>
+            </svg>
+            <div class="gauge-num"><strong id="gaugeNum">87</strong><span>/ 100</span></div>
+          </div>
+          <p class="gauge-cap">Security Health Score</p>
+
+          <ul class="findings">
+            <li><i class="dot crit"></i><span>Content-Security-Policy missing</span><em class="tag crit">Critical</em></li>
+            <li><i class="dot warn"></i><span>Server header exposes version</span><em class="tag warn">Warning</em></li>
+            <li><i class="dot ok"></i><span>HSTS enabled</span><em class="tag ok">Passed</em></li>
+            <li><i class="dot ok"></i><span>HTTP redirects to HTTPS</span><em class="tag ok">Passed</em></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="results reveal">
+        <h4>How results are delivered</h4>
+        <ul>
+          <li><strong>Security Health Score</strong> from 0 to 100</li>
+          <li><strong>Interactive table</strong> filtered by Critical, Warning and Passed</li>
+          <li><strong>Expandable cards</strong> with "What is this?" and "How to fix it" snippets for Nginx, Apache, FastAPI and Express.js</li>
+          <li><strong>PDF audit report</strong> with StarNet and VMAXweb branding, ready for clients or investors</li>
+        </ul>
+      </div>
+
+      <div class="plans" aria-label="VMAXweb plans">
+        <div class="plan reveal">
+          <p class="plan-name">Free</p>
+          <p class="plan-price">$0<small> forever</small></p>
+          <ul>
+            <li>All 6 scan modules</li>
+            <li>Detailed table, fixes and code samples</li>
+            <li>PDF report included</li>
+            <li>Manual scans, 5 full scans per month</li>
+          </ul>
+        </div>
+        <div class="plan plan-pro reveal">
+          <p class="plan-name">Pro <span class="pill">Automation</span></p>
+          <p class="plan-price grad">$29<small> / month</small></p>
+          <ul>
+            <li>Scheduled daily or weekly scans</li>
+            <li>Real-time alerts by email, Slack or Discord</li>
+            <li>White-label PDF with your own logo</li>
+            <li>CI/CD integration for GitHub Actions and GitLab</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="section" id="team">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <p class="eyebrow">Team</p>
+        <h2>Founder</h2>
+      </div>
+      <div class="founder reveal">
+        <div class="avatar-ring">
+          <div class="avatar" aria-hidden="true">JA</div>
+        </div>
+        <h3>Jeko Abuladze</h3>
+        <p class="role">Founder &amp; CEO of StarNet</p>
+        <p class="titles">Cybersecurity Specialist <i aria-hidden="true">·</i> Software Engineer</p>
+        <p class="founder-note">Founded StarNet to make professional-grade security tooling available to every team building on the web.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Get in touch</h2>
+        <p class="contact-copy">Questions about VMAXweb, partnerships or security work? Send a message and we will reply by email.</p>
+        <div class="contact-mail">
+          <a href="mailto:starnetdev20@gmail.com" id="mailLink">starnetdev20@gmail.com</a>
+          <button type="button" class="copy" id="copyMail">Copy</button>
+        </div>
+      </div>
+
+      <form class="form reveal" id="contactForm" novalidate>
+        <div class="field">
+          <input id="cName" name="name" type="text" autocomplete="name" placeholder=" " required>
+          <label for="cName">Name</label>
+        </div>
+        <div class="field">
+          <input id="cEmail" name="email" type="email" autocomplete="email" placeholder=" " required>
+          <label for="cEmail">Your email</label>
+        </div>
+        <div class="field">
+          <textarea id="cMsg" name="message" rows="4" placeholder=" " required></textarea>
+          <label for="cMsg">Message</label>
+        </div>
+        <button class="btn btn-primary" type="submit"><span>Send message</span></button>
+        <p class="form-consent">By sending a message you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+        <p class="form-note" id="formNote" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year">2026</span> StarNet. All rights reserved.</p>
+  <a class="footer-link" href="privacy.html">Privacy Policy</a>
+  <p class="footer-tag">Protecting digital trust.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
